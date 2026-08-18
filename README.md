@@ -1,6 +1,12 @@
 # MoxPP
 C++ Template Repository with Conan2 and Premake5 for Windows, Linux and MacOS. Out of the Box unit-testing and GitHub actions.
 
+```
+.\mox.bat init
+.\mox.bat init skip_conan #when connan file not changed
+.\mox.bat build --conf Debug
+```
+
 **Please make sure to read the WHOLE readme and follow all instructions!**
 
 ## Important things to know

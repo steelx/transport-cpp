@@ -13,7 +13,7 @@
 -- PRODUCT NAME
 -- This the name used for the product provided by this repo
 -- (On windows used as the solution name)
-cmox_product_name = "MoxPP"
+cmox_product_name = "TPCPP"
 
 -- CONFIGURATIONS
 -- The first array _n are the configuration names
@@ -21,16 +21,18 @@ cmox_product_name = "MoxPP"
 -- (use true on all debugging configurations)
 cmox_configurations_n = {
     "Debug",
+    "Development",
     "Release",
 }
 cmox_configurations_d = {
     true,
     false,
+    false,
 }
 
 -- CPPVERSION
 -- Defines the c++ version
-cmox_cpp_version = "C++23"
+cmox_cpp_version = "C++20"
 
 -- SOURCE FOLDER NAME
 cmox_src_folder = "src"
@@ -53,7 +55,7 @@ cmox_src_folder = "src"
 -- "manual"         Projects are not loaded by the MoxPP
 --                  provide the "cmox_function_includeprojects"
 --                  function.
-cmox_project_architecture = "single"
+cmox_project_architecture = "flat"
 
 -- DLL DISTRIBUTING
 -- When enabled, dlls will be copied as a postbuild-step to the output directory
@@ -74,7 +76,7 @@ cmox_unit_test_src = "test"
 
 -- This function is called when the workspace is configured
 function cmox_function_setupworkspace()
-    startproject "HelloWorld" -- recommended to configure this for visual studio
+    startproject "TransportCPPHost" -- recommended to configure this for visual studio
 end
 
 -- This function is called for each project when it's beeing configured

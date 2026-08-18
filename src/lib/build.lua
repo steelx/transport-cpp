@@ -1,8 +1,9 @@
--- This line starts a new project it needs to be the first line
+-- Core lib with all the code
+
 -- Arguments
 -- 1) Name of the project used in the visual studio solution
 -- 2) OPTIONAL: Output name of the project (name of the exe / lib)
-mox_project("HelloWorld", "hello_world")
+mox_project("LibTransportCPP", "lib_tp_cpp")
 
 -- This line selects the programming language
 -- Options
@@ -26,15 +27,13 @@ mox_cpp()
 --    Utility, used for custom build actions without code (will build but no code)
 -- F) mox_none()
 --    None, used for header only projects (skipped during build)
-mox_console()
+mox_staticlib()
 
 -- Make sure to give each project a unique GUID
 -- The UUID is important for VisualStudio projects
 -- You can generate a UUID by running `mox generate_uuid` or `./mox.sh generate_uuid` respective.
-uuid("d54bdce0-8b62-11f0-b558-0800200c9a66")
-
--- Please uncomment the following line when you create a shared or static lib, that is required for the unittest
--- mox_test_requirement()
+uuid("90e40544-e89a-48d2-bad1-1ae58916771b")
+mox_test_requirement()
 
 -- Further setup:
 -- Now you can all the premake5 setting you like
